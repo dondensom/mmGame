@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+#md1{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: absolute;
+    transition: 1s cubic-bezier(0.5, -0.52, 0.165, 1);
+}
+
+div#md1:hover {
+        background-color: rgb(57, 163, 103);
+        opacity: 1;
+        transform: rotate(720deg); /* Standard syntax */
+        transition: 2s cubic-bezier(0.5, -0.52, 0.165, 0.1);
+       
+        
+     
+    }
+
+#md2{    
+top: 200px;
+left:50px;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(25, 0, 255);
+    transition: 3s;
+    position: absolute;
+    animation: spin 4s;
+    animation-timing-function: easy;
+    animation-iteration-count:infinite;
+    animation-direction:alternate;
+    animation-fill-mode:forwards;
+    animation-play-state: running;
+}
+#md2:hover{
+animation-play-state: paused;
+}
+@keyframes spin{
+0%{
+    height:100px;
+    width:200px;
+}
+33%{
+    height:50px;
+    width:100px;
+    border: radius 1px;
+}
+100%{
+    height:50px;
+    width:500px;
+    border-radius:100%;
+    transform: rotate(740deg);
+    rotate:  1 5 1 360deg;
+}
+}
+#md3{
+    margin: 20px;
+  padding: 10px;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  rotate: y 0.55turn;
+  transition: 1s;
+}
+#md3:hover{
+    margin: 20px;
+  padding: 10px;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background-color: rgb(1, 1, 1);
+  rotate: 1 2 1  1.57rad;
+  transition: 1s;
+}
+
+
+    </style>
+</head>
+<body>
+   <div id="md1"></div>
+   <div id="md2"></div>
+   <div id="md3"></div>
+   <script>md1.style.right = '150px';</script>
+</body>
+</html>
